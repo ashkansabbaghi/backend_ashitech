@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/3.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
-# ashikan
+# ashkan
 from pathlib import Path
 import os
 from datetime import timedelta
@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-k8rj35-dqerd(n-6n1fth12z9tieutr-cogwpe66%$+(=bm-fr
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ["*","ashkanSA.pythonanywhere.com"]
 
 
 # Application definition
