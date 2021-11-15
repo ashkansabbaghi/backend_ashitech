@@ -1,7 +1,6 @@
 from rest_framework import generics, permissions, mixins
 from rest_framework.response import Response
-from . import serializers
-from . import models
+from . import serializers ,models
 from knox.models import AuthToken
 from django.contrib.auth.models import User
 from rest_framework import status

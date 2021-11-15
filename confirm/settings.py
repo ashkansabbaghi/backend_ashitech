@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-k8rj35-dqerd(n-6n1fth12z9tieutr-cogwpe66%$+(=bm-fr
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["*","ashkanSA.pythonanywhere.com"]
+ALLOWED_HOSTS = ["*", "ashkanSA.pythonanywhere.com"]
 
 
 # Application definition
@@ -46,7 +46,7 @@ INSTALLED_APPS = [
     'knox',
     "corsheaders",
 
-     # MyApp
+    # MyApp
     'api.apps.ApiConfig',
     'account.apps.AccountConfig',
 ]
@@ -126,14 +126,15 @@ USE_L10N = True
 
 USE_TZ = True
 
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:8080","*","ashkanSA.pythonanywhere.com"
-]
+CORS_ORIGIN_ALLOW_ALL = True
+# CORS_ALLOWED_ORIGINS = [
+#     "http://localhost:8080", "*", "ashkanSA.pythonanywhere.com"
+# ]
 
 
-CORS_ORIGIN_WHITELIST = [
-    "http://localhost:8080","*","ashkanSA.pythonanywhere.com"
-]
+# CORS_ORIGIN_WHITELIST = [
+#     "http://localhost:8080", "*", "ashkanSA.pythonanywhere.com"
+# ]
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
@@ -159,11 +160,11 @@ REST_FRAMEWORK = {
 }
 
 REST_KNOX = {
-  'SECURE_HASH_ALGORITHM': 'cryptography.hazmat.primitives.hashes.SHA512',
-  'AUTH_TOKEN_CHARACTER_LENGTH': 64,
-  'TOKEN_TTL': timedelta(days=20),
-  'USER_SERIALIZER': 'knox.serializers.UserSerializer',
-  'TOKEN_LIMIT_PER_USER': None,
-  'AUTO_REFRESH': False,
-#   'EXPIRY_DATETIME_FORMAT': api_settings.DATETME_FORMAT,
+    'SECURE_HASH_ALGORITHM': 'cryptography.hazmat.primitives.hashes.SHA512',
+    'AUTH_TOKEN_CHARACTER_LENGTH': 64,
+    'TOKEN_TTL': timedelta(days=20),
+    'USER_SERIALIZER': 'knox.serializers.UserSerializer',
+    'TOKEN_LIMIT_PER_USER': None,
+    'AUTO_REFRESH': False,
+    #   'EXPIRY_DATETIME_FORMAT': api_settings.DATETME_FORMAT,
 }
