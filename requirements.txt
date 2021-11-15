@@ -1,0 +1,8 @@
+pip install djangorestframework
+pip install django-rest-knox
+pip install django-cors-headers
+
+
+
+
+# use :  pip install -r requirements.txt
